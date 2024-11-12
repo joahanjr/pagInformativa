@@ -1,24 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const imgSeguridad = "/public/seguridad.jpeg";
 ---
 
 <Layout title="Welcome to Astro.">
-	<section>
-		<h1>
-			Te damos la bienvenida a la página de Ciberseguridad
-			en donde pordrás encontrar información relevante sobre el tema.
-			y aprender sobre las mejores prácticas para proteger tus datos.
-		</h1>
-	</section>
-</Layout>
+  <section>
+    <h2>Introducción</h2>
+    <p>
+      En la era digital actual, los niños están cada vez más expuestos a las
+      redes sociales desde edades tempranas, lo cual representa tanto una
+      oportunidad de aprendizaje como un desafío en términos de seguridad.
+    </p>
+    <p>
+      Esta guía está diseñada para padres y educadores con el objetivo de
+      proporcionar estrategias efectivas para proteger a los niños en línea. A
+      lo largo de esta guía se desarrollan técnicas para configurar la
+      privacidad de las redes sociales, monitorear el contenido accesible y
+      fomentar comportamientos seguros y responsables en el entorno digital.
+    </p>
+    <p>
+      Además, se sugieren prácticas para que los padres fomenten un uso
+      equilibrado y consciente de la tecnología, minimizando los riesgos y
+      ayudando a los niños a comprender el impacto de las redes sociales en su
+      vida diaria.
+    </p>
+    <picture>
+      <Image
+        class="seguridad"
+        src={imgSeguridad}
+        alt="Seguridad"
+        width="350"
+        height="300"
+      />
+    </picture>
+  </section>
 
-<style>
+  <style>
     section {
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-</style>
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    picture {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .seguridad {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</Layout>
