@@ -5,27 +5,29 @@ import { Image } from "astro:assets";
 const imgSeguridad = "/public/seguridad.jpeg";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Inicio">
   <section>
-    <h2>Introducción</h2>
-    <p>
-      En la era digital actual, los niños están cada vez más expuestos a las
-      redes sociales desde edades tempranas, lo cual representa tanto una
-      oportunidad de aprendizaje como un desafío en términos de seguridad.
-    </p>
-    <p>
-      Esta guía está diseñada para padres y educadores con el objetivo de
-      proporcionar estrategias efectivas para proteger a los niños en línea. A
-      lo largo de esta guía se desarrollan técnicas para configurar la
-      privacidad de las redes sociales, monitorear el contenido accesible y
-      fomentar comportamientos seguros y responsables en el entorno digital.
-    </p>
-    <p>
-      Además, se sugieren prácticas para que los padres fomenten un uso
-      equilibrado y consciente de la tecnología, minimizando los riesgos y
-      ayudando a los niños a comprender el impacto de las redes sociales en su
-      vida diaria.
-    </p>
+    <article>
+      <h2>Introducción</h2>
+      <p>
+        En la era digital actual, los niños están cada vez más expuestos a las
+        redes sociales desde edades tempranas, lo cual representa tanto una
+        oportunidad de aprendizaje como un desafío en términos de seguridad.
+      </p>
+      <p>
+        Esta guía está diseñada para padres y educadores con el objetivo de
+        proporcionar estrategias efectivas para proteger a los niños en línea. A
+        lo largo de esta guía se desarrollan técnicas para configurar la
+        privacidad de las redes sociales, monitorear el contenido accesible y
+        fomentar comportamientos seguros y responsables en el entorno digital.
+      </p>
+      <p>
+        Además, se sugieren prácticas para que los padres fomenten un uso
+        equilibrado y consciente de la tecnología, minimizando los riesgos y
+        ayudando a los niños a comprender el impacto de las redes sociales en su
+        vida diaria.
+      </p>
+    </article>
     <picture>
       <Image
         class="seguridad"
@@ -56,6 +58,15 @@ const imgSeguridad = "/public/seguridad.jpeg";
       height: auto;
       display: flex;
       justify-content: center;
+    }
+    @media screen and (min-width: 768px) {
+      section {
+        display: flex;
+      }
+      article,
+      picture {
+        width: 50%;
+      }
     }
   </style>
 </Layout>
