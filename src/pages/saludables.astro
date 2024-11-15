@@ -1,33 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const imgHabitos = "/public/habitos.jpeg";
 ---
 
 <Layout title="Creación de Hábitos Saludables">
   <section>
-    <h2>Creación de Hábitos Saludables</h2>
-    <p>
-      Crear hábitos de uso saludable de las redes sociales ayuda a los niños a
-      gestionar mejor su tiempo y a ser conscientes del impacto de la tecnología
-      en su bienestar. Algunos consejos prácticos incluyen:
-    </p>
-    <p>
-      <b>Establecer un Horario de Uso:</b> Define horarios específicos para el uso
-      de redes sociales, reservando tiempo para otras actividades, como deporte,
-      lectura, y tiempo en familia.
-    </p>
-    <p>
-      <b>Promover el Pensamiento Crítico:</b> Anima a los niños a cuestionar la información
-      que ven en redes sociales y a evitar compararse con otros.
-    </p>
-    <p>
-      <b>Prácticas de Desconexión:</b> Establece 'momentos sin pantallas' en casa,
-      como en las comidas o antes de dormir.
-    </p>
-    <p>
-      <b>Conversaciones Abiertas:</b> Fomenta el diálogo sobre el contenido que ven
-      en redes sociales, así como sus sentimientos respecto a sus experiencias en
-      línea.
-    </p>
+    <article>
+      <h2>Creación de Hábitos Saludables</h2>
+      <p>
+        Crear hábitos de uso saludable de las redes sociales ayuda a los niños a
+        gestionar mejor su tiempo y a ser conscientes del impacto de la
+        tecnología en su bienestar. Algunos consejos prácticos incluyen:
+      </p>
+      <p>
+        <b>Establecer un Horario de Uso:</b> Define horarios específicos para el
+        uso de redes sociales, reservando tiempo para otras actividades, como deporte,
+        lectura, y tiempo en familia.
+      </p>
+      <p>
+        <b>Promover el Pensamiento Crítico:</b> Anima a los niños a cuestionar la
+        información que ven en redes sociales y a evitar compararse con otros.
+      </p>
+      <p>
+        <b>Prácticas de Desconexión:</b> Establece 'momentos sin pantallas' en casa,
+        como en las comidas o antes de dormir.
+      </p>
+      <p>
+        <b>Conversaciones Abiertas:</b> Fomenta el diálogo sobre el contenido que
+        ven en redes sociales, así como sus sentimientos respecto a sus experiencias
+        en línea.
+      </p>
+    </article>
+    <picture>
+      <Image
+        class="seguridad"
+        src={imgHabitos}
+        alt="Hábitos Saludables"
+        width="350"
+        height="300"
+      />
+    </picture>
   </section>
 </Layout>
 
@@ -38,5 +52,26 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .seguridad {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      display: flex;
+    }
+    article,
+    picture {
+      width: 50%;
+    }
   }
 </style>

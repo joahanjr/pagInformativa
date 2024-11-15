@@ -1,36 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import imgSeguridadRedes from "/public/seguridadredes.png";
 ---
 
 <Layout title="Seguridad en línea">
   <section>
-    <h2>Educación sobre Seguridad en Línea</h2>
-    <p>
-      Educar a los niños sobre la seguridad en línea es un paso esencial para
-      protegerlos de posibles riesgos en redes sociales. Esto incluye enseñarles
-      buenas prácticas y cómo responder en caso de situaciones adversas. Los
-      puntos principales son:
-    </p>
-    <p>
-      - <b>No Compartir Información Privada:</b> Explica a los niños que deben evitar
-      compartir datos personales con desconocidos.
-    </p>
-    <p>
-      - <b>Bloqueo y Reporte:</b> Enséñales a bloquear usuarios que los hagan sentir
-      incómodos y a reportar contenido o comportamientos inadecuados.
-    </p>
+    <article>
+      <h2>Educación sobre Seguridad en Línea</h2>
+      <p>
+        Educar a los niños sobre la seguridad en línea es un paso esencial para
+        protegerlos de posibles riesgos en redes sociales. Esto incluye
+        enseñarles buenas prácticas y cómo responder en caso de situaciones
+        adversas. Los puntos principales son:
+      </p>
+      <p>
+        - <b>No Compartir Información Privada:</b> Explica a los niños que deben
+        evitar compartir datos personales con desconocidos.
+      </p>
+      <p>
+        - <b>Bloqueo y Reporte:</b> Enséñales a bloquear usuarios que los hagan sentir
+        incómodos y a reportar contenido o comportamientos inadecuados.
+      </p>
 
-    <p>
-      -
-      <b>Uso Responsable de Contenidos:</b> Educa sobre los riesgos de compartir
-      imágenes y publicaciones personales, recordándoles que todo lo que se publica
-      en línea puede ser visto y compartido por otros.
-    </p>
-    <p>
-      -
-      <b>Conversaciones sobre Ciberacoso:</b> Habla sobre el ciberacoso y cómo actuar
-      ante mensajes o comentarios ofensivos.
-    </p>
+      <p>
+        -
+        <b>Uso Responsable de Contenidos:</b> Educa sobre los riesgos de compartir
+        imágenes y publicaciones personales, recordándoles que todo lo que se publica
+        en línea puede ser visto y compartido por otros.
+      </p>
+      <p>
+        -
+        <b>Conversaciones sobre Ciberacoso:</b> Habla sobre el ciberacoso y cómo
+        actuar ante mensajes o comentarios ofensivos.
+      </p>
+    </article>
+    <picture>
+      <Image
+        class="seguridad"
+        src={imgSeguridadRedes}
+        alt="Seguridad en Línea"
+        width="350"
+        height="300"
+      />
+    </picture>
   </section>
 </Layout>
 
@@ -41,5 +55,26 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .seguridad {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      display: flex;
+    }
+    article,
+    picture {
+      width: 50%;
+    }
   }
 </style>
